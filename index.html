@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login 💖</h2>
+
+    <input type="text" id="username" placeholder="Username">
+
+    <input type="date" id="birthday">
+
+    <select id="gender">
+      <option value="">Select gender</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button onclick="checkLogin()">Login</button>
+
+    <p id="error" class="error"></p>
+  </div>
+
+  <script>
+    function checkLogin() {
+      // 🔐 SET THE CORRECT VALUES HERE
+      const correctUsername = "Morry";
+      const correctBirthday = "2013-03-02"; // YYYY-MM-DD
+      const correctGender = "female";
+
+      const username = document.getElementById("username").value;
+      const birthday = document.getElementById("birthday").value;
+      const gender = document.getElementById("gender").value;
+      const error = document.getElementById("error");
+
+      if (
+        username === correctUsername &&
+        birthday === correctBirthday &&
+        gender === correctGender
+      ) {
+        // ❤️ REDIRECT TO SURPRISE PAGE
+        window.location.href = "https://www.youtube.com/watch?v=wsTv9y931o8&t=581s";
+      } else {
+        error.textContent = "Oops… that information doesn’t match 💔";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+<script>
+  const correctUsername = "Morry";
+  const correctBirthday = "2013-03-02";
+  const correctGender = "female";
+
+
+
+</script>
